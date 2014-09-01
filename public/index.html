@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StashChat (based on socket.IO)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul class="pages">
+    <li class="chat page">
+      <div class="chatArea">
+        <ul class="messages"></ul>
+      </div>
+      <div class="msgInputBox" align="left">
+	      <span class="sendToLabel">Send to</span>
+		  <select id="sendTo" name="sendTo" class="inputSendTo"><option value="whatever">whatever</option></select>
+	      <input class="inputMessage" placeholder="Type here..."/>
+      </div>
+    </li>
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">What's your STASH email and password?</h3>
+        <input class="usernameInput" type="text" placeholder="email" maxlength="255" value="apitest@stash.my" /><br/>
+        <input class="passwordInput" type="password" placeholder="password" maxlength="100" value="testpass" /><br/>
+      </div>
+    </li>
+  </ul>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3.js"></script>
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/core-min.js"></script>
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-utf16-min.js"></script>
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>
