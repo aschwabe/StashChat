@@ -385,7 +385,7 @@ alert("DEBUG - found item " + i);
     log(message, {
       prepend: false
     });
-    alert('Got room hash: ' + data.roomhash);
+    //alert('Got room hash: ' + data.roomhash);
     roomhash = data.roomhash;
     addParticipantsMessage(data);
     updateUserCombo(data.userlist);
