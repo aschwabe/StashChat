@@ -1,13 +1,17 @@
 {
-	"name": "socket.io-chat",
-	"version": "0.0.0",
-	"description": "A simple chat client using socket.io",
-	"main": "app.js",
+	"name": "stashchat",
+	"version": "0.0.1",
+	"description": "A simple chat client using socket.io and STASH api for secure, ephemeral real time chat",
+	"scripts": {
+	  "start": "node server.js"
+	},
+	"main": "server.js",
 	"author": "Grant Timmerman",
 	"private": true,
 	"license": "BSD",
 	"dependencies": {
 		"express": "3.4.8",
-		"socket.io": "1.x"
+		"socket.io": "1.x",
+		"crypto-js": "2.x"
     }
 }
