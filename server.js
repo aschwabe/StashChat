@@ -4,13 +4,13 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 
-var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
-var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
+var port = process.env.OPENSHIFT_NODEJS_PORT ||  process.env.OPENSHIFT_INTERNAL_PORT || 3000;
+var ipaddr = process.env.OPENSHIFT_NODEJS_IP || process.env.OPENSHIFT_INTERNAL_IP || "127.0.0.1";
 
 var AES = require("crypto-js/aes");
 var SHA256 = require("crypto-js/sha256");
 
-server.listen( port, ipaddress, function() {
+server.listen( port, ipaddr, function() {
     console.log((new Date()) + ' Server is listening on port ' + port);
 });
 
